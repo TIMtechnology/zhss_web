@@ -24,55 +24,62 @@ jobs:
         env:
           PROGRESS: none
         displayName: build
-
-  - job: test
-    pool:
-      vmImage: 'Ubuntu-16.04'
-
-    container:
-      image: circleci/node:latest-browsers
-      options: '-u root'
-
-    steps:
-      - script: yarn install
-        displayName: install
-      - script: npm run test:all
-        env:
-          PROGRESS: none
-        displayName: test
-
-  - job: Windows
-    pool:
-      vmImage: 'vs2017-win2016'
-    steps:
-      - task: NodeTool@0
+      - task: CopyFilesOverSSH@0
         inputs:
-          versionSpec: '11.x'
-      - script: yarn install
-        displayName: install
-      - script: npm run lint
-        displayName: lint
-      - script: npm run test:all
-        env:
-          PROGRESS: none
-        displayName: test
-      - script: npm run build
-        env:
-          PROGRESS: none
-        displayName: build
+          sshEndpoint: '正式环境'
+          sourceFolder: 'dist/'
+          contents: '**'
+          targetFolder: '/www/wwwroot/zhss.timkj.com/public'
+      
 
-  - job: MacOS
-    pool:
-      vmImage: 'macOS-10.13'
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '11.x'
-      - script: yarn install
-        displayName: install
-      - script: npm run lint
-        displayName: lint
-      - script: npm run
-        env:
-          PROGRESS: none
-        displayName: build
+  # - job: test
+  #   pool:
+  #     vmImage: 'Ubuntu-16.04'
+
+  #   container:
+  #     image: circleci/node:latest-browsers
+  #     options: '-u root'
+
+  #   steps:
+  #     - script: yarn install
+  #       displayName: install
+  #     - script: npm run test:all
+  #       env:
+  #         PROGRESS: none
+  #       displayName: test
+
+  # - job: Windows
+  #   pool:
+  #     vmImage: 'vs2017-win2016'
+  #   steps:
+  #     - task: NodeTool@0
+  #       inputs:
+  #         versionSpec: '11.x'
+  #     - script: yarn install
+  #       displayName: install
+  #     - script: npm run lint
+  #       displayName: lint
+  #     - script: npm run test:all
+  #       env:
+  #         PROGRESS: none
+  #       displayName: test
+  #     - script: npm run build
+  #       env:
+  #         PROGRESS: none
+  #       displayName: build
+
+  # - job: MacOS
+  #   pool:
+  #     vmImage: 'macOS-10.13'
+  #   steps:
+  #     - task: NodeTool@0
+  #       inputs:
+  #         versionSpec: '11.x'
+  #     - script: yarn install
+  #       displayName: install
+  #     - script: npm run lint
+  #       displayName: lint
+  #     - script: npm run
+  #       env:
+  #         PROGRESS: none
+  #       displayName: build
