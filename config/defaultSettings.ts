@@ -54,7 +54,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: '智慧校园管理端',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;

@@ -1,6 +1,6 @@
 English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md) | [Türkçe](./README.tr-TR.md) | [日本語](./README.ja-JP.md) | [Français](./README.fr-FR.md)
 
-<h1 align="center">Ant Design Pro</h1>
+<h1 align="center">基于Ant Design Pro的智慧校园管理端</h1>
 
 <div align="center">
 

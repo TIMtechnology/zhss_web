@@ -79,11 +79,10 @@ export default {
     // defaultGitUrl: 'https://gitee.com/ant-design/pro-blocks',
     defaultGitUrl: 'https://github.com/ant-design/pro-blocks',
   },
-  hash: true,
+  hash: false,
   targets: {
     ie: 11,
   },
-  publicPath:'/web_static',
   devtool: isAntDesignProPreview ? 'source-map' : false,
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
