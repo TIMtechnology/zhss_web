@@ -29,11 +29,11 @@ jobs:
           password: 'NYdRah8BY7AntpcG'
           rootDirectory: 'dist/'
           filePatterns: '**'
-          remoteDirectory: '/public/'
+          remoteDirectory: '/public/www'
           clean: false
           cleanContents: false
           preservePaths: false
-          trustSSL: false
+          trustSSL: true
         env:
           PROGRESS: none
         displayName: build
