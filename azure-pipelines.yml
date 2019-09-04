@@ -27,7 +27,7 @@ jobs:
           serverUrl: 'ftp://152.136.129.13'
           username: 'zhss'
           password: 'NYdRah8BY7AntpcG'
-          rootDirectory: '/dist/'
+          rootDirectory: 'dist/'
           filePatterns: '**'
           remoteDirectory: '/public/www/'
           clean: false
