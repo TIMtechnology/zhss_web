@@ -3,7 +3,7 @@ import { Router as DefaultRouter, Route, Switch } from 'react-router-dom';
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
 import history from '@tmp/history';
-import RendererWrapper0 from '/Users/timkeji/gz/zhss_web/src/pages/.umi/LocaleWrapper.jsx';
+import RendererWrapper0 from 'F:/github/zhss_web/src/pages/.umi/LocaleWrapper.jsx';
 import _dvaDynamic from 'dva/dynamic';
 
 const Router = require('dva/router').routerRedux.ConnectedRouter;
@@ -40,7 +40,7 @@ const routes = [
     component: __IS_BROWSER
       ? _dvaDynamic({
           component: () => import('../../layouts/UserLayout'),
-          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/UserLayout').default,
@@ -51,14 +51,14 @@ const routes = [
           ? _dvaDynamic({
               app: require('@tmp/dva').getApp(),
               models: () => [
-                import('/Users/timkeji/gz/zhss_web/src/pages/User/models/register.js').then(
+                import('F:/github/zhss_web/src/pages/User/models/register.js').then(
                   m => {
                     return { namespace: 'register', ...m.default };
                   },
                 ),
               ],
               component: () => import('../User/Login'),
-              LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+              LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                 .default,
             })
           : require('../User/Login').default,
@@ -70,14 +70,14 @@ const routes = [
           ? _dvaDynamic({
               app: require('@tmp/dva').getApp(),
               models: () => [
-                import('/Users/timkeji/gz/zhss_web/src/pages/User/models/register.js').then(
+                import('F:/github/zhss_web/src/pages/User/models/register.js').then(
                   m => {
                     return { namespace: 'register', ...m.default };
                   },
                 ),
               ],
               component: () => import('../User/wxbind'),
-              LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+              LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                 .default,
             })
           : require('../User/wxbind').default,
@@ -86,7 +86,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -98,7 +98,7 @@ const routes = [
     component: __IS_BROWSER
       ? _dvaDynamic({
           component: () => import('../../layouts/BasicLayout'),
-          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/BasicLayout').default,
@@ -109,7 +109,7 @@ const routes = [
         component: __IS_BROWSER
           ? _dvaDynamic({
               component: () => import('../ModeMsg/ModeMsg'),
-              LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+              LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                 .default,
             })
           : require('../ModeMsg/ModeMsg').default,
@@ -119,7 +119,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -131,7 +131,7 @@ const routes = [
     component: __IS_BROWSER
       ? _dvaDynamic({
           component: () => import('../../layouts/BasicLayout'),
-          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/BasicLayout').default,
@@ -143,14 +143,14 @@ const routes = [
           ? _dvaDynamic({
               app: require('@tmp/dva').getApp(),
               models: () => [
-                import('/Users/timkeji/gz/zhss_web/src/pages/Unit/models/Unit.js').then(
+                import('F:/github/zhss_web/src/pages/Unit/models/Unit.js').then(
                   m => {
                     return { namespace: 'Unit', ...m.default };
                   },
                 ),
               ],
               component: () => import('../Unit/Update'),
-              LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+              LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                 .default,
             })
           : require('../Unit/Update').default,
@@ -160,7 +160,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -172,7 +172,7 @@ const routes = [
     component: __IS_BROWSER
       ? _dvaDynamic({
           component: () => import('../../layouts/BasicLayout'),
-          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
             .default,
         })
       : require('../../layouts/BasicLayout').default,
@@ -190,24 +190,24 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/activities.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/activities.js').then(
                       m => {
                         return { namespace: 'activities', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/chart.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/chart.js').then(
                       m => {
                         return { namespace: 'chart', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/monitor.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/monitor.js').then(
                       m => {
                         return { namespace: 'monitor', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Dashboard/Analysis'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Dashboard/Analysis').default,
@@ -222,24 +222,24 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/activities.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/activities.js').then(
                       m => {
                         return { namespace: 'activities', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/chart.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/chart.js').then(
                       m => {
                         return { namespace: 'chart', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/monitor.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/monitor.js').then(
                       m => {
                         return { namespace: 'monitor', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Dashboard/Monitor'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Dashboard/Monitor').default,
@@ -252,24 +252,24 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/activities.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/activities.js').then(
                       m => {
                         return { namespace: 'activities', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/chart.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/chart.js').then(
                       m => {
                         return { namespace: 'chart', ...m.default };
                       },
                     ),
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Dashboard/models/monitor.js').then(
+                    import('F:/github/zhss_web/src/pages/Dashboard/models/monitor.js').then(
                       m => {
                         return { namespace: 'monitor', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Dashboard/Workplace'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Dashboard/Workplace').default,
@@ -278,7 +278,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -302,7 +302,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../OlderOrder/OlderOrderCenter'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderOrderCenter').default,
@@ -317,7 +317,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderOrderCenterXJDW'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderOrderCenterXJDW').default,
@@ -331,7 +331,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderOrderCenterBDW'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderOrderCenterBDW').default,
@@ -345,7 +345,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderOrderCenterFWRY'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderOrderCenterFWRY').default,
@@ -358,7 +358,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../OlderOrder/CreatOlderOrder'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/CreatOlderOrder').default,
@@ -372,7 +372,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/AdminUserOrderList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/AdminUserOrderList').default,
@@ -387,7 +387,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/AdminUserOrderInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/AdminUserOrderInfo').default,
@@ -396,7 +396,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -416,7 +416,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderHome/OlderHomeList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderHome/OlderHomeList').default,
@@ -430,7 +430,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderHome/CreatOlderHomeCenter'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderHome/CreatOlderHomeCenter')
@@ -446,7 +446,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../OlderOrder/OlderHome/OlderHomeOrderList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../OlderOrder/OlderHome/OlderHomeOrderList')
@@ -456,7 +456,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -466,7 +466,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -491,14 +491,14 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                        import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                           m => {
                             return { namespace: 'act', ...m.default };
                           },
                         ),
                       ],
                       component: () => import('../weapp/activity/act-admin'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/activity/act-admin').default,
@@ -511,7 +511,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -519,7 +519,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step1'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step1').default,
@@ -532,7 +532,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -540,7 +540,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step2'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step2').default,
@@ -553,7 +553,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -561,7 +561,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step3'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step3').default,
@@ -574,7 +574,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -582,7 +582,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step4'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step4').default,
@@ -595,7 +595,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -603,7 +603,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step5'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step5').default,
@@ -616,7 +616,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -624,7 +624,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step6'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step6').default,
@@ -637,7 +637,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -645,7 +645,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step7'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step7').default,
@@ -658,7 +658,7 @@ const routes = [
                       ? _dvaDynamic({
                           app: require('@tmp/dva').getApp(),
                           models: () => [
-                            import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                            import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                               m => {
                                 return { namespace: 'act', ...m.default };
                               },
@@ -666,7 +666,7 @@ const routes = [
                           ],
                           component: () =>
                             import('../weapp/activity/act-admin/Step8'),
-                          LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                          LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                             .default,
                         })
                       : require('../weapp/activity/act-admin/Step8').default,
@@ -675,7 +675,7 @@ const routes = [
                   {
                     component: () =>
                       React.createElement(
-                        require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                        require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                           .default,
                         { pagesPath: 'src/pages', hasRoutesInConfig: true },
                       ),
@@ -690,7 +690,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                        import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                           m => {
                             return { namespace: 'act', ...m.default };
                           },
@@ -698,7 +698,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../weapp/activity/ActivityList/ActivityList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/activity/ActivityList/ActivityList')
@@ -714,7 +714,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                        import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                           m => {
                             return { namespace: 'act', ...m.default };
                           },
@@ -722,7 +722,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../weapp/activity/ActivityList/ActUserList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/activity/ActivityList/ActUserList')
@@ -737,7 +737,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                        import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                           m => {
                             return { namespace: 'act', ...m.default };
                           },
@@ -745,7 +745,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../weapp/activity/ActivityInfor/ActivityInfor'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/activity/ActivityInfor/ActivityInfor')
@@ -756,7 +756,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -771,14 +771,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/weapp/activity/models/act.js').then(
+                    import('F:/github/zhss_web/src/pages/weapp/activity/models/act.js').then(
                       m => {
                         return { namespace: 'act', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../weapp/activity/Lunbo/Lunbo'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../weapp/activity/Lunbo/Lunbo').default,
@@ -797,7 +797,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../weapp/lists/UserList/UserList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/lists/UserList/UserList').default,
@@ -811,7 +811,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../weapp/lists/UserList/userinfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/lists/UserList/userinfo').default,
@@ -826,7 +826,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../weapp/lists/GroupList/GroupList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/lists/GroupList/GroupList').default,
@@ -841,7 +841,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../weapp/lists/GroupList/GroupInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/lists/GroupList/GroupInfo').default,
@@ -850,7 +850,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -870,7 +870,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../weapp/welfare/CreatNewWelfare'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../weapp/welfare/CreatNewWelfare').default,
@@ -879,7 +879,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -889,7 +889,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -914,7 +914,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../WeNum/lists/UserList/UserList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../WeNum/lists/UserList/UserList').default,
@@ -929,7 +929,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../WeNum/lists/UserList/UserInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../WeNum/lists/UserList/UserInfo').default,
@@ -943,7 +943,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../WeNum/lists/GroupList/GroupList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../WeNum/lists/GroupList/GroupList').default,
@@ -958,7 +958,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../WeNum/lists/GroupList/GroupInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../WeNum/lists/GroupList/GroupInfo').default,
@@ -967,7 +967,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -977,7 +977,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -998,7 +998,7 @@ const routes = [
             component: __IS_BROWSER
               ? _dvaDynamic({
                   component: () => import('../ModeMsg/ModeMsg'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../ModeMsg/ModeMsg').default,
@@ -1007,7 +1007,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1032,7 +1032,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/UnitManageList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/UnitManageList').default,
@@ -1046,7 +1046,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/RoleManageList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/RoleManageList').default,
@@ -1060,7 +1060,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/RoleManageInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/RoleManageInfo').default,
@@ -1075,7 +1075,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/UserManageList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/UserManageList').default,
@@ -1089,7 +1089,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/DepartmentList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/DepartmentList').default,
@@ -1104,7 +1104,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSystem/DepartmentInfo'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSystem/DepartmentInfo').default,
@@ -1113,7 +1113,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1133,7 +1133,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/MenuSetting/MenuList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/MenuSetting/MenuList').default,
@@ -1142,7 +1142,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1162,7 +1162,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSetting/AuthList'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSetting/AuthList').default,
@@ -1176,7 +1176,7 @@ const routes = [
                   ? _dvaDynamic({
                       component: () =>
                         import('../AdminSystem/AuthSetting/AuthClass'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../AdminSystem/AuthSetting/AuthClass').default,
@@ -1185,7 +1185,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1195,7 +1195,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1215,14 +1215,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Profile/models/profile.js').then(
+                    import('F:/github/zhss_web/src/pages/Profile/models/profile.js').then(
                       m => {
                         return { namespace: 'profile', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Profile/BasicProfile'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Profile/BasicProfile').default,
@@ -1235,14 +1235,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Profile/models/profile.js').then(
+                    import('F:/github/zhss_web/src/pages/Profile/models/profile.js').then(
                       m => {
                         return { namespace: 'profile', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Profile/AdvancedProfile'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Profile/AdvancedProfile').default,
@@ -1251,7 +1251,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1270,7 +1270,7 @@ const routes = [
             component: __IS_BROWSER
               ? _dvaDynamic({
                   component: () => import('../Result/Success'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Result/Success').default,
@@ -1282,7 +1282,7 @@ const routes = [
             component: __IS_BROWSER
               ? _dvaDynamic({
                   component: () => import('../Result/Error'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Result/Error').default,
@@ -1291,7 +1291,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1311,14 +1311,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Exception/models/error.js').then(
+                    import('F:/github/zhss_web/src/pages/Exception/models/error.js').then(
                       m => {
                         return { namespace: 'error', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Exception/403'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Exception/403').default,
@@ -1331,14 +1331,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Exception/models/error.js').then(
+                    import('F:/github/zhss_web/src/pages/Exception/models/error.js').then(
                       m => {
                         return { namespace: 'error', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Exception/404'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Exception/404').default,
@@ -1351,14 +1351,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Exception/models/error.js').then(
+                    import('F:/github/zhss_web/src/pages/Exception/models/error.js').then(
                       m => {
                         return { namespace: 'error', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Exception/500'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Exception/500').default,
@@ -1372,14 +1372,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Exception/models/error.js').then(
+                    import('F:/github/zhss_web/src/pages/Exception/models/error.js').then(
                       m => {
                         return { namespace: 'error', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Exception/TriggerException'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Exception/TriggerException').default,
@@ -1388,7 +1388,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1406,7 +1406,7 @@ const routes = [
             component: __IS_BROWSER
               ? _dvaDynamic({
                   component: () => import('../Account/Center/Center'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Account/Center/Center').default,
@@ -1416,7 +1416,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../Account/Center/Articles'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Center/Articles').default,
@@ -1427,7 +1427,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../Account/Center/Applications'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Center/Applications').default,
@@ -1438,7 +1438,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../Account/Center/Projects'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Center/Projects').default,
@@ -1447,7 +1447,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1461,14 +1461,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
+                    import('F:/github/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
                       m => {
                         return { namespace: 'geographic', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../Account/Settings/Info'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../Account/Settings/Info').default,
@@ -1479,14 +1479,14 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
+                        import('F:/github/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
                           m => {
                             return { namespace: 'geographic', ...m.default };
                           },
                         ),
                       ],
                       component: () => import('../Account/Settings/BaseView'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Settings/BaseView').default,
@@ -1498,7 +1498,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
+                        import('F:/github/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
                           m => {
                             return { namespace: 'geographic', ...m.default };
                           },
@@ -1506,7 +1506,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../Account/Settings/SecurityView'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Settings/SecurityView').default,
@@ -1518,7 +1518,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
+                        import('F:/github/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
                           m => {
                             return { namespace: 'geographic', ...m.default };
                           },
@@ -1526,7 +1526,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../Account/Settings/BindingView'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Settings/BindingView').default,
@@ -1538,7 +1538,7 @@ const routes = [
                   ? _dvaDynamic({
                       app: require('@tmp/dva').getApp(),
                       models: () => [
-                        import('/Users/timkeji/gz/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
+                        import('F:/github/zhss_web/src/pages/Account/Settings/models/geographic.js').then(
                           m => {
                             return { namespace: 'geographic', ...m.default };
                           },
@@ -1546,7 +1546,7 @@ const routes = [
                       ],
                       component: () =>
                         import('../Account/Settings/NotificationView'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Settings/NotificationView').default,
@@ -1555,7 +1555,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1571,7 +1571,7 @@ const routes = [
                 component: __IS_BROWSER
                   ? _dvaDynamic({
                       component: () => import('../Account/Organize/SelectOrg'),
-                      LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                      LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                         .default,
                     })
                   : require('../Account/Organize/SelectOrg').default,
@@ -1580,7 +1580,7 @@ const routes = [
               {
                 component: () =>
                   React.createElement(
-                    require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                    require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                       .default,
                     { pagesPath: 'src/pages', hasRoutesInConfig: true },
                   ),
@@ -1590,7 +1590,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1609,14 +1609,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/APF/models/APF.js').then(
+                    import('F:/github/zhss_web/src/pages/APF/models/APF.js').then(
                       m => {
                         return { namespace: 'APF', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../APF/WaitingForMe'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../APF/WaitingForMe').default,
@@ -1629,14 +1629,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/APF/models/APF.js').then(
+                    import('F:/github/zhss_web/src/pages/APF/models/APF.js').then(
                       m => {
                         return { namespace: 'APF', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../APF/APFInfo'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../APF/APFInfo').default,
@@ -1649,14 +1649,14 @@ const routes = [
               ? _dvaDynamic({
                   app: require('@tmp/dva').getApp(),
                   models: () => [
-                    import('/Users/timkeji/gz/zhss_web/src/pages/APF/models/APF.js').then(
+                    import('F:/github/zhss_web/src/pages/APF/models/APF.js').then(
                       m => {
                         return { namespace: 'APF', ...m.default };
                       },
                     ),
                   ],
                   component: () => import('../APF/CreatByMe'),
-                  LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+                  LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                     .default,
                 })
               : require('../APF/CreatByMe').default,
@@ -1665,7 +1665,7 @@ const routes = [
           {
             component: () =>
               React.createElement(
-                require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+                require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
                   .default,
                 { pagesPath: 'src/pages', hasRoutesInConfig: true },
               ),
@@ -1676,7 +1676,7 @@ const routes = [
         component: __IS_BROWSER
           ? _dvaDynamic({
               component: () => import('../404'),
-              LoadingComponent: require('/Users/timkeji/gz/zhss_web/src/components/PageLoading/index')
+              LoadingComponent: require('F:/github/zhss_web/src/components/PageLoading/index')
                 .default,
             })
           : require('../404').default,
@@ -1685,7 +1685,7 @@ const routes = [
       {
         component: () =>
           React.createElement(
-            require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
@@ -1695,7 +1695,7 @@ const routes = [
   {
     component: () =>
       React.createElement(
-        require('/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),

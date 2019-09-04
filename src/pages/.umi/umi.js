@@ -1,12 +1,12 @@
 import './polyfills';
-import '../../../node_modules/umi-plugin-polyfills/lib/ie11.js';
+import '../../../node_modules/_umi-plugin-polyfills@1.4.2@umi-plugin-polyfills/lib/ie11.js';
 import history from './history';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import findRoute, {
   getUrlQuery,
-} from '/Users/timkeji/gz/zhss_web/node_modules/umi-build-dev/lib/findRoute.js';
+} from 'F:/github/zhss_web/node_modules/_umi-build-dev@1.11.3@umi-build-dev/lib/findRoute.js';
 
 // runtime plugins
 const plugins = require('umi/_runtimePlugin');
@@ -24,7 +24,9 @@ plugins.init({
     'locale',
   ],
 });
-plugins.use(require('../../../node_modules/umi-plugin-dva/lib/runtime'));
+plugins.use(
+  require('../../../node_modules/_umi-plugin-dva@1.7.9@umi-plugin-dva/lib/runtime'),
+);
 
 const app = require('@tmp/dva')._onCreate();
 window.g_app = app;
