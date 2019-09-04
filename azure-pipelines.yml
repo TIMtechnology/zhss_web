@@ -21,6 +21,19 @@ jobs:
       - script: npm run lint
         displayName: lint
       - script: npm run build
+      - task: FtpUpload@2
+        inputs:
+          credentialsOption: 'inputs'
+          serverUrl: '152.136.129.13'
+          username: 'zhss'
+          password: 'NYdRah8BY7AntpcG'
+          rootDirectory: '/'
+          filePatterns: '**'
+          remoteDirectory: '/dist/'
+          clean: false
+          cleanContents: false
+          preservePaths: false
+          trustSSL: false
         env:
           PROGRESS: none
         displayName: build
