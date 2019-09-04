@@ -24,14 +24,14 @@ jobs:
       - task: FtpUpload@2
         inputs:
           credentialsOption: 'inputs'
-          serverUrl: '152.136.129.13'
+          serverUrl: 'ftp://152.136.129.13'
           username: 'zhss'
           password: 'NYdRah8BY7AntpcG'
-          rootDirectory: '/'
+          rootDirectory: '/dist/'
           filePatterns: '**'
-          remoteDirectory: '/dist/'
+          remoteDirectory: '/public/www/'
           clean: false
-          cleanContents: false
+          cleanContents: true
           preservePaths: false
           trustSSL: false
         env:
