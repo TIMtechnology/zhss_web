@@ -178,14 +178,15 @@ export default {
   manifest: {
     basePath: '/',
   },
+  history: 'hash',
   chainWebpack: webpackPlugin,
-  /*
+  
   proxy: {
-    '/server/api/': {
-      target: 'https://preview.pro.ant.design/',
+    '/api/v1/': {
+      target: 'https://zhss.timkj.com/api/',
       changeOrigin: true,
-      pathRewrite: { '^/server': '' },
+      pathRewrite: { '^/api': '' },
     },
   },
-  */
+  
 } as IConfig;
