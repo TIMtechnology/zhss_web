@@ -24,18 +24,12 @@ jobs:
         env:
           PROGRESS: none
         displayName: build
-      - task: FtpUpload@2
-        displayName: 'FTP Upload: 123'
+      - task: CopyFilesOverSSH@0
         inputs:
-          credentialsOption: 'inputs'
-          serverUrl: 'ftp://152.136.129.13'
-          username: 'zhss'
-          password: 'NYdRah8BY7AntpcG'
-          rootDirectory: 'dist/'
-          remoteDirectory: '/public/www'
-          trustSSL: false
-        continueOnError: true
-        timeoutInMinutes: 1
+          sshEndpoint: '正式环境'
+          sourceFolder: 'dist/'
+          contents: '**'
+          targetFolder: '/www/wwwroot/zhss.timkj.com/public'
       
 
   # - job: test
