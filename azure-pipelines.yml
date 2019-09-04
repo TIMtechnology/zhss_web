@@ -24,18 +24,17 @@ jobs:
         env:
           PROGRESS: none
         displayName: build
-    steps:
-    - task: FtpUpload@2
-      displayName: 'FTP Upload: 123'
-      inputs:
-        credentialsOption: 'inputs'
-        serverUrl: 'ftp://152.136.129.13'
-        username: 'zhss'
-        password: 'NYdRah8BY7AntpcG'
-        rootDirectory: 'dist/'
-        remoteDirectory: '/public/www'
-      continueOnError: true
-      timeoutInMinutes: 1
+      - task: FtpUpload@2
+        displayName: 'FTP Upload: 123'
+        inputs:
+          credentialsOption: 'inputs'
+          serverUrl: 'ftp://152.136.129.13'
+          username: 'zhss'
+          password: 'NYdRah8BY7AntpcG'
+          rootDirectory: 'dist/'
+          remoteDirectory: '/public/www'
+        continueOnError: true
+        timeoutInMinutes: 1
       
 
   # - job: test
