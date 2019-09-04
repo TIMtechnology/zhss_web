@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -6,14 +7,34 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
 
-steps:
-- script: npm install
-  displayName: '执行应用环境安装'
+- task: UseNode@1
+  inputs:
+    version: '12.x'
+    checkLatest: true
+- task: Npm@1
+  inputs:
+    command: 'install'
 
-- script:
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'npm lint'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'npm run build'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)/www'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/s.zip'
+    replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
