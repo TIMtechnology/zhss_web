@@ -33,6 +33,7 @@ jobs:
           password: 'NYdRah8BY7AntpcG'
           rootDirectory: 'dist/'
           remoteDirectory: '/public/www'
+          trustSSL: false
         continueOnError: true
         timeoutInMinutes: 1
       
