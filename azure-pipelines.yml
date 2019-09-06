@@ -1,0 +1,33 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+name: Stableweb
+
+trigger:
+  - master
+
+jobs:
+  - job: lintAndBuild
+
+    pool:
+      vmImage: 'Ubuntu-16.04'
+
+    steps:
+      - checkout: self
+        clean: false
+      - script: npm install
+        displayName: install
+      - script: npm run lint
+        displayName: lint
+      - script: npm run build
+        env:
+          PROGRESS: none
+        displayName: build
+      - task: CopyFilesOverSSH@0
+        inputs:
+          sshEndpoint: '正式环境'
+          sourceFolder: 'dist/'
+          contents: '**'
+          targetFolder: '/www/wwwroot/dev.zhss.timkj.com/public'
+      
