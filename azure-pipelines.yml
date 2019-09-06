@@ -29,7 +29,6 @@ jobs:
           sshEndpoint: '正式环境'
           sourceFolder: 'dist/'
           contents: '**'
-          cleanTargetFolder: true
           targetFolder: '/www/wwwroot/dev.zhss.timkj.com/public'
       - task: PublishBuildArtifacts@1
         inputs:
