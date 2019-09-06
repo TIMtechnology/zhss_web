@@ -30,4 +30,8 @@ jobs:
           sourceFolder: 'dist/'
           contents: '**'
           targetFolder: '/www/wwwroot/dev.zhss.timkj.com/public'
-      
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: 'dist/'
+          ArtifactName: 'TIMkeji_dev'
+          publishLocation: 'Container'
