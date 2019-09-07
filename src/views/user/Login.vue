@@ -191,7 +191,7 @@ export default {
           const loginParams = { ...values }
           delete loginParams.username
           localStorage.setItem('usernum', values.username)
-          loginParams[!state.loginType ? 'email' : 'username'] = values.username
+          loginParams.username = values.username
           loginParams.password = md5(values.password)
           Login(loginParams)
             .then((res) => this.loginSuccess(res))

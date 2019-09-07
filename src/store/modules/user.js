@@ -38,9 +38,11 @@ const user = {
       return new Promise((resolve, reject) => {
         login(userInfo).then(response => {
           const result = response.result
+          console.log(result)
           Vue.ls.set(ACCESS_TOKEN, result.token, 7 * 24 * 60 * 60 * 1000)
           commit('SET_TOKEN', result.token)
           localStorage.setItem('Auth_DW_id', result.Auth_DW_id)
+          localStorage.setItem('DWList', JSON.stringify(result.DWList))
           resolve()
         }).catch(error => {
           reject(error)
@@ -51,7 +53,8 @@ const user = {
     // 获取用户信息
     GetInfo ({ commit }) {
       var data = {
-        usernum: localStorage.getItem('usernum')
+        usernum: localStorage.getItem('usernum'),
+        dqdw: localStorage.getItem('Auth_DW_id')
       }
       return new Promise((resolve, reject) => {
         getInfo(data).then(response => {
@@ -68,7 +71,7 @@ const user = {
           //     }
           //   })
           //   role.permissionList = role.permissions.map(permission => { return permission.permissionId })
-          commit('SET_ROLES', 'admin')
+          commit('SET_ROLES', result.roleId)
           commit('SET_INFO', result)
           // } else {
           //   reject(new Error('getInfo: roles must be a non-null array !'))

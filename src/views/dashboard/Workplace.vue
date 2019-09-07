@@ -2,7 +2,7 @@
   <page-view :avatar="avatar" :title="false">
     <div slot="headerContent">
       <div class="title">{{ timeFix }}，{{ user.name }}<span class="welcome-text">，{{ welcome }}</span></div>
-      <div>前端工程师 | 蚂蚁金服 - 某某某事业群 - VUE平台</div>
+      <div>预留角色字段 | {{user.dw}}</div>
     </div>
     <div slot="extra">
       <a-row class="more-info">
@@ -185,6 +185,7 @@ export default {
       welcome: (state) => state.user.welcome
     }),
     userInfo () {
+      console.log(this.$store.getters.userInfo)
       return this.$store.getters.userInfo
     }
   },
@@ -201,9 +202,9 @@ export default {
     // })
   },
   mounted () {
-    this.getProjects()
-    this.getActivity()
-    this.getTeams()
+    // this.getProjects()
+    // this.getActivity()
+    // this.getTeams()
     this.initRadar()
   },
   methods: {
