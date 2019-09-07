@@ -30,10 +30,10 @@
               <a-icon type="setting" />
               <span>单位列表</span>
             </span>
-            <a-menu-item v-for="dw in dwlist">
+            <a-menu-item v-for="dw in dwlist" :key="dw">
               <a href="javascript:;" @click="changeToDw(dw.Auth_DW_id)">
                 <a-icon type="logout" />
-                <span>{{dw.Auth_DW_name}}</span>
+                <span>{{ dw.Auth_DW_name }}</span>
               </a>
             </a-menu-item>
           </a-sub-menu>
@@ -58,7 +58,7 @@ import LangSelect from '@/components/tools/LangSelect'
 
 export default {
   name: 'UserMenu',
-  data() {
+  data () {
     return {
       dwlist: []
     }
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     ...mapActions(['Logout']),
-    handleLogout() {
+    handleLogout () {
       this.$confirm({
         title: '提示',
         content: '真的要注销登录吗 ?',
@@ -90,17 +90,17 @@ export default {
               })
             })
         },
-        onCancel() {}
+        onCancel () {}
       })
     },
-    changeToDw(e) {
+    changeToDw (e) {
       console.log(e)
-      //进行更新当前单位 且 重载界面
+      // 进行更新当前单位 且 重载界面
       localStorage.setItem('Auth_DW_id', e)
       this.$router.go(0)
     }
   },
-  mounted() {
+  mounted () {
     this.dwlist = JSON.parse(localStorage.getItem('DWList'))
   }
 }

@@ -2,7 +2,7 @@
   <page-view :avatar="avatar" :title="false">
     <div slot="headerContent">
       <div class="title">{{ timeFix }}，{{ user.name }}<span class="welcome-text">，{{ welcome }}</span></div>
-      <div>预留角色字段 | {{user.dw}}</div>
+      <div>预留角色字段 | {{ user.dw }}</div>
     </div>
     <div slot="extra">
       <a-row class="more-info">
